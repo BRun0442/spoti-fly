@@ -14,11 +14,11 @@ function Home() {
         <header>
           <div id='header-arrows'>
             <IoIosArrowBack
-              color='rgb(120, 120, 120)'
+              color='rgb(172, 172, 172)'
               size='2.1vw'
             />
             <IoIosArrowForward
-              color='rgb(120, 120, 120)'
+              color='rgb(172, 172, 172)'
               size='2.1vw'
             />
           </div>
@@ -29,7 +29,7 @@ function Home() {
             </li>
 
             <li>
-              <Link to='/sign_up' id='header-list-login'>Login</Link>
+              <Link to='/login' id='header-list-login'>Login</Link>
             </li>
           </ul>
         </header>
