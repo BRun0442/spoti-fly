@@ -12,7 +12,7 @@ body{
   padding: 1.6rem 0 0 1.35rem;
 }
 
-main{
+#home-content{
   background-color: rgb(37, 37, 37);
   width: 100vw;
   height: 150vh;
@@ -88,9 +88,4 @@ header{
   padding: 0.75rem 1.65rem 0.75rem 1.65rem;
   font-size: 1.05em;
   transform: all 0.2s ease-in-out;
-}
-
-#content{
-  display: grid;
-  grid-template-columns: 20vw auto;
 }

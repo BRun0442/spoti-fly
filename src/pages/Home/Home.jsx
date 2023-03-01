@@ -34,7 +34,7 @@ function Home() {
           </ul>
         </header>
       </div>
-      <main>
+      <main id='home-content'>
         f
       </main>
     </body>

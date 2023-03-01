@@ -1,0 +1,122 @@
+#login-container{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 40vw;
+  height: 100vh;
+  margin: auto;
+  color: black;
+  font-weight: 600;
+  font-size:small;
+}
+
+.input-container{
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 1rem;
+}
+
+.input{
+  padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.input-text{
+  margin-bottom: 0.5rem;
+}
+
+#forgot-password{
+  text-decoration: underline;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor:pointer;
+}
+
+#login-button{
+  background-color: #1ED760;
+  padding: 0.9rem 2.2rem 0.9rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 0;
+}
+
+#login-interactions{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 13vh;
+  width: 100%;
+  row-gap: 1rem;
+}
+
+#login-verifications{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  row-gap: 1rem;
+}
+
+#login-checkbox{
+  display: flex;
+  padding: 0.1rem 0 0.1rem 0;
+  height:fit-content
+}
+
+#checkbox-container{
+  position: relative;
+}
+
+#checkmark{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 5px;
+  background-color: #149641;
+  z-index: -1;
+}
+
+#checkbox-container > input:not(:checked) ~ #checkmark{
+  background-color: #ffffff;
+  outline:1px solid gray;
+}
+
+#checkbox-container > input{
+  opacity: 0;
+  width: 15px;
+  height: 15px;
+  margin: 0;
+}
+
+#checkmark::after{
+  content: '';
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 3px;
+  width: 2px;
+  height: 5px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg)
+}
+
+#checkbox-container > input:checked ~ #checkmark::after{
+  display: block;
+}
+
+#remember-me{
+  font-weight: 400;
+  margin-left: 0.6rem;
+}
+
+@media screen and (max-width: 767px){
+  #login-button{
+    width: 100%;
+  }
+}
