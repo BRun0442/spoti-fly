@@ -1,8 +1,15 @@
-import React from 'react'
+import React, {useState, useContext} from 'react'
 import './style.css'
-import blackLogo from '../../images/logo_big_black.png'
+import loginAuthentication from '../../services/user'
+import { userContext } from '../../contexts/userAccount';
 
 function Login() {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  const { setEmailContext } = useContext(userContext);
+  const { setPasswordContext } = useContext(userContext);
+
   return (
     <body id='login'>
       <main id="login-container">
@@ -12,6 +19,7 @@ function Login() {
             <input 
               className="input" 
               placeholder='Email address or user name'
+              onChange={event => {setEmail(event.target.value)}}
             />
           </div>
 
@@ -20,6 +28,7 @@ function Login() {
             <input 
               className="input"
               placeholder="Password"
+              onChange={event => {setPassword(event.target.value)}}
             />
           </div>
         </section>
@@ -36,7 +45,15 @@ function Login() {
               <label id='remember-me'>Remember me</label>
             </div>
 
-            <button id='login-button'>Login</button>
+            <button 
+              id='login-button'
+              onClick={() => {
+                console.log()
+                loginAuthentication(email, password)
+              }}
+            >
+              Login
+            </button>
           </div>
         </section>
       </main>
